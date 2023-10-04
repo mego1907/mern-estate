@@ -10,6 +10,7 @@ const SignUp = () => {
 
   const [data, setData] = useState(null)
 
+  // Handle Change Func
   const handleChange = (e) => {
     setFormData({ 
       ...formData, 
@@ -17,6 +18,7 @@ const SignUp = () => {
     });
   };
 
+  // Handle Submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -71,10 +73,7 @@ const SignUp = () => {
           id="password" 
           onChange={handleChange}
         />
-        <button 
-          className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
-          disabled={loading}
-        >
+        <button className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80" disabled={loading}>
           {loading ? "Loading..." : "Sign up"} 
         </button>
       </form>
